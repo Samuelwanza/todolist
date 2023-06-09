@@ -17,7 +17,8 @@
       "import/extensions": [
         "error",
         {
-            "js": "ignorePackages"
+            "js": "ignorePackages",
+            "svg":"ignorepackages"
         }
     ]
     },
