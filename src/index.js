@@ -1,6 +1,6 @@
 import './style.css';
 import minimalist from './minimalist-logo.png';
-import arrowPath from './arrowPath.svg';
+import arrowPath from './arrowpath.svg';
 import enter from './enter.png';
 import ellipsis from './EllipsisVertical.svg';
 import tasks from './tasks';
