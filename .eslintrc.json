@@ -20,7 +20,9 @@
             "js": "ignorePackages",
             "svg":"ignorepackages"
         }
-    ]
+        
+    ],
+    "import/no-unresolved": "off"
     },
     "ignorePatterns": [
       "dist/",
