@@ -1,6 +1,6 @@
 import './style.css';
 import minimalist from './minimalist-logo.png';
-import arrowPath from './arrowPath.svg';
+import arrowpath from './arrowpath.svg';
 import enter from './enter.png';
 import ellipsis from './EllipsisVertical.svg';
 import tasks from './tasks';
@@ -28,7 +28,7 @@ const component = () => {
   const inputWrapper = document.createElement('div');
 
   const img = document.createElement('img');
-  img.src = arrowPath;
+  img.src = arrowpath;
 
   const img2 = document.createElement('img');
   img2.src = enter;
