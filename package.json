@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This project involves Manual setup  of a webpack template",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
