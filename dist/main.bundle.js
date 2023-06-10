@@ -9,6 +9,26 @@
  */
 (self["webpackChunkwebpack_setup"] = self["webpackChunkwebpack_setup"] || []).push([["main"],{
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _minimalist_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./minimalist-logo.png */ \"./src/minimalist-logo.png\");\n/* harmony import */ var _arrowpath_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./arrowpath.svg */ \"./src/arrowpath.svg\");\n/* harmony import */ var _enter_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./enter.png */ \"./src/enter.png\");\n/* harmony import */ var _EllipsisVertical_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EllipsisVertical.svg */ \"./src/EllipsisVertical.svg\");\n/* harmony import */ var _tasks_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tasks.js */ \"./src/tasks.js\");\n\n\n\n\n\n\nconst component = () => {\n  const mainDiv = document.createElement('div');\n  const headerDiv = document.createElement('div');\n  headerDiv.classList.add('header-div');\n  const headerText = document.createElement('h2');\n  headerText.textContent = 'minimalist';\n  const Logo = document.createElement('img');\n  Logo.classList.add('header-logo');\n  Logo.src = _minimalist_logo_png__WEBPACK_IMPORTED_MODULE_1__;\n  headerDiv.appendChild(Logo);\n  mainDiv.appendChild(headerDiv);\n  mainDiv.appendChild(headerText);\n  const listWrapper = document.createElement('div');\n  listWrapper.classList.add('list-wrapper');\n  const headerWrapper = document.createElement('div');\n  const inputWrapper = document.createElement('div');\n  const img = document.createElement('img');\n  img.src = _arrowpath_svg__WEBPACK_IMPORTED_MODULE_2__;\n  const img2 = document.createElement('img');\n  img2.src = _enter_png__WEBPACK_IMPORTED_MODULE_3__;\n  const todoInput = document.createElement('input');\n  todoInput.placeholder = 'Add to your list...';\n  const todolist = document.createElement('ul');\n  const title = document.createElement('h3');\n  title.textContent = 'Tasks';\n  headerWrapper.appendChild(title);\n  headerWrapper.appendChild(img);\n  headerWrapper.classList.add('item-decorator');\n  inputWrapper.appendChild(todoInput);\n  inputWrapper.appendChild(img2);\n  inputWrapper.classList.add('item-decorator');\n  listWrapper.appendChild(headerWrapper);\n  listWrapper.appendChild(inputWrapper);\n  mainDiv.appendChild(listWrapper);\n  _tasks_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"].forEach(task => {\n    const element = document.createElement('li');\n    const taskInput = document.createElement('input');\n    const label = document.createElement('label');\n    const img3 = document.createElement('img');\n    taskInput.type = 'checkbox';\n    label.textContent = task.description;\n    taskInput.value = task.description;\n    img3.src = _EllipsisVertical_svg__WEBPACK_IMPORTED_MODULE_4__;\n    element.appendChild(taskInput);\n    element.appendChild(label);\n    element.appendChild(img3);\n    element.classList.add('item-decorator1');\n    todolist.appendChild(element);\n    return element;\n  });\n  const minifooter = document.createElement('p');\n  minifooter.textContent = 'Clear all completed';\n  minifooter.classList.add('mini-decorator');\n  listWrapper.appendChild(todolist);\n  listWrapper.appendChild(minifooter);\n  mainDiv.appendChild(listWrapper);\n  return mainDiv;\n};\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-setup/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/tasks.js":
+/*!**********************!*\
+  !*** ./src/tasks.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst tasks = [{\n  index: 1,\n  description: 'Studying redux state management',\n  completed: true\n}, {\n  index: 2,\n  description: 'Designing a database for a personal project',\n  completed: false\n}, {\n  index: 3,\n  description: 'Setting the system architecture for personal project',\n  completed: true\n}];\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tasks);\n\n//# sourceURL=webpack://webpack-setup/./src/tasks.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
@@ -146,26 +166,6 @@ eval("module.exports = __webpack_require__.p + \"b46edd8ddf44f4deef89.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"10b7b9d890e354bf96ed.png\";\n\n//# sourceURL=webpack://webpack-setup/./src/minimalist-logo.png?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _minimalist_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./minimalist-logo.png */ \"./src/minimalist-logo.png\");\n/* harmony import */ var _arrowpath_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./arrowpath.svg */ \"./src/arrowpath.svg\");\n/* harmony import */ var _enter_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./enter.png */ \"./src/enter.png\");\n/* harmony import */ var _EllipsisVertical_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EllipsisVertical.svg */ \"./src/EllipsisVertical.svg\");\n/* harmony import */ var _tasks_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tasks.js */ \"./src/tasks.js\");\n\n\n\n\n\n\nconst component = () => {\n  const mainDiv = document.createElement(\"div\");\n  const headerDiv = document.createElement(\"div\");\n  headerDiv.classList.add(\"header-div\");\n  const headerText = document.createElement(\"h2\");\n  headerText.textContent = \"minimalist\";\n  const Logo = document.createElement(\"img\");\n  Logo.classList.add(\"header-logo\");\n  Logo.src = _minimalist_logo_png__WEBPACK_IMPORTED_MODULE_1__;\n  headerDiv.appendChild(Logo);\n  mainDiv.appendChild(headerDiv);\n  mainDiv.appendChild(headerText);\n  const listWrapper = document.createElement(\"div\");\n  listWrapper.classList.add(\"list-wrapper\");\n  const headerWrapper = document.createElement(\"div\");\n  const inputWrapper = document.createElement(\"div\");\n  const img = document.createElement(\"img\");\n  img.src = _arrowpath_svg__WEBPACK_IMPORTED_MODULE_2__;\n  const img2 = document.createElement(\"img\");\n  img2.src = _enter_png__WEBPACK_IMPORTED_MODULE_3__;\n  const todoInput = document.createElement(\"input\");\n  todoInput.placeholder = \"Add to your list...\";\n  const todolist = document.createElement(\"ul\");\n  const title = document.createElement(\"h3\");\n  title.textContent = \"Tasks\";\n  headerWrapper.appendChild(title);\n  headerWrapper.appendChild(img);\n  headerWrapper.classList.add(\"item-decorator\");\n  inputWrapper.appendChild(todoInput);\n  inputWrapper.appendChild(img2);\n  inputWrapper.classList.add(\"item-decorator\");\n  listWrapper.appendChild(headerWrapper);\n  listWrapper.appendChild(inputWrapper);\n  mainDiv.appendChild(listWrapper);\n  _tasks_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"].forEach(task => {\n    const element = document.createElement(\"li\");\n    const taskInput = document.createElement(\"input\");\n    const label = document.createElement(\"label\");\n    const img3 = document.createElement(\"img\");\n    taskInput.type = \"checkbox\";\n    label.textContent = task.description;\n    taskInput.value = task.description;\n    img3.src = _EllipsisVertical_svg__WEBPACK_IMPORTED_MODULE_4__;\n    element.appendChild(taskInput);\n    element.appendChild(label);\n    element.appendChild(img3);\n    element.classList.add(\"item-decorator1\");\n    todolist.appendChild(element);\n    return element;\n  });\n  const minifooter = document.createElement(\"p\");\n  minifooter.textContent = \"Clear all completed\";\n  minifooter.classList.add(\"mini-decorator\");\n  listWrapper.appendChild(todolist);\n  listWrapper.appendChild(minifooter);\n  mainDiv.appendChild(listWrapper);\n  return mainDiv;\n};\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-setup/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/tasks.js":
-/*!**********************!*\
-  !*** ./src/tasks.js ***!
-  \**********************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst tasks = [{\n  index: 1,\n  description: 'Studying redux state management',\n  completed: true\n}, {\n  index: 2,\n  description: 'Designing a database for a personal project',\n  completed: false\n}, {\n  index: 3,\n  description: 'Setting the system architecture for personal project',\n  completed: true\n}];\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tasks);\n\n//# sourceURL=webpack://webpack-setup/./src/tasks.js?");
 
 /***/ })
 
