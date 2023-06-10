@@ -3,7 +3,7 @@ import minimalist from './minimalist-logo.png';
 import arrowpath from './arrowpath.svg';
 import enter from './enter.png';
 import ellipsis from './EllipsisVertical.svg';
-import tasks from './tasks.js';
+import tasks from './tasks';
 
 const component = () => {
   const mainDiv = document.createElement('div');
