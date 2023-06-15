@@ -80,7 +80,7 @@ input::placeholder {
   border-bottom: lightgray 1px solid;
 }
 
-.item-decorator1 > input {
+.label {
   width: 20px;
   border: none;
   outline: none;
