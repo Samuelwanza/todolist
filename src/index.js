@@ -7,6 +7,8 @@ import Todo from './todo';
 import editTodo from './edit';
 import deleteImage from './delete.png';
 import deleteTodo from './delete';
+import markCompleted from './interactiveTodo';
+import clearCompleted from './allCompleted';
 
 let tasks = JSON.parse(localStorage.getItem('tasks'));
 if (tasks === null) {
@@ -89,6 +91,10 @@ const component = () => {
             img3.src = ellipsis;
           }
         });
+
+        taskInput.addEventListener('change', () => {
+          markCompleted(task, thisTasks);
+        });
         label.addEventListener('focus', () => {
           img3.src = deleteImage;
         });
@@ -96,7 +102,12 @@ const component = () => {
           if (img3.src === deleteImage) {
             deleteTodo(task.index);
           }
+          img3.src = deleteImage;
         });
+        taskInput.checked = false;
+        if (task.completed === true) {
+          taskInput.checked = true;
+        }
 
         todolist.appendChild(element);
         return element;
@@ -106,6 +117,7 @@ const component = () => {
   }
   const minifooter = document.createElement('p');
   minifooter.textContent = 'Clear all completed';
+
   minifooter.classList.add('mini-decorator');
   listWrapper.appendChild(todolist);
   listWrapper.appendChild(minifooter);
@@ -116,4 +128,7 @@ const component = () => {
 document.body.appendChild(component());
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('button').addEventListener('click', Todo);
+  document
+    .querySelector('.mini-decorator')
+    .addEventListener('click', clearCompleted);
 });
