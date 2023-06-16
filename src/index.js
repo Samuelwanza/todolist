@@ -3,7 +3,15 @@ import minimalist from './minimalist-logo.png';
 import arrowpath from './arrowpath.svg';
 import enter from './enter.png';
 import ellipsis from './EllipsisVertical.svg';
-import tasks from './tasks';
+import Todo from './todo';
+import editTodo from './edit';
+import deleteImage from './delete.png';
+import deleteTodo from './delete';
+
+let tasks = JSON.parse(localStorage.getItem('tasks'));
+if (tasks === null) {
+  tasks = localStorage.setItem('tasks', JSON.stringify([]));
+}
 
 const component = () => {
   const mainDiv = document.createElement('div');
@@ -34,8 +42,10 @@ const component = () => {
   img2.src = enter;
 
   const todoInput = document.createElement('input');
+  todoInput.id = 'input';
   todoInput.placeholder = 'Add to your list...';
   const todolist = document.createElement('ul');
+  todolist.id = 'todolist';
   const title = document.createElement('h3');
   title.textContent = 'Tasks';
 
@@ -47,28 +57,53 @@ const component = () => {
   inputWrapper.appendChild(img2);
   inputWrapper.classList.add('item-decorator');
 
+  img2.id = 'button';
+
   listWrapper.appendChild(headerWrapper);
   listWrapper.appendChild(inputWrapper);
   mainDiv.appendChild(listWrapper);
-  tasks.forEach((task) => {
-    const element = document.createElement('li');
-    const taskInput = document.createElement('input');
-    const label = document.createElement('label');
-    const img3 = document.createElement('img');
-    taskInput.type = 'checkbox';
-    label.textContent = task.description;
 
-    taskInput.value = task.description;
-    img3.src = ellipsis;
-    element.appendChild(taskInput);
-    element.appendChild(label);
-    element.appendChild(img3);
+  const thisTasks = JSON.parse(localStorage.getItem('tasks'));
+  if (thisTasks.length !== 0) {
+    thisTasks.forEach((task) => {
+      if (task && task.description) {
+        const element = document.createElement('li');
+        const taskInput = document.createElement('input');
+        const label = document.createElement('input');
+        taskInput.classList.add('label');
+        const img3 = document.createElement('img');
+        taskInput.type = 'checkbox';
+        label.value = task.description;
 
-    element.classList.add('item-decorator1');
+        img3.src = ellipsis;
+        element.appendChild(taskInput);
+        element.appendChild(label);
+        element.appendChild(img3);
 
-    todolist.appendChild(element);
-    return element;
-  });
+        element.classList.add('item-decorator1');
+        element.addEventListener('keyup', (e) => {
+          img3.src = ' ';
+          img3.src = deleteImage;
+          if (e.key === 'Enter') {
+            editTodo(label, task);
+            img3.src = ellipsis;
+          }
+        });
+        label.addEventListener('focus', () => {
+          img3.src = deleteImage;
+        });
+        img3.addEventListener('click', () => {
+          if (img3.src === deleteImage) {
+            deleteTodo(task.index);
+          }
+        });
+
+        todolist.appendChild(element);
+        return element;
+      }
+      return task;
+    });
+  }
   const minifooter = document.createElement('p');
   minifooter.textContent = 'Clear all completed';
   minifooter.classList.add('mini-decorator');
@@ -79,3 +114,6 @@ const component = () => {
 };
 
 document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('button').addEventListener('click', Todo);
+});
