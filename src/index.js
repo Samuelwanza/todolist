@@ -89,6 +89,9 @@ const component = () => {
             img3.src = ellipsis;
           }
         });
+        label.addEventListener('focus', () => {
+          img3.src = deleteImage;
+        });
         img3.addEventListener('click', () => {
           if (img3.src === deleteImage) {
             deleteTodo(task.index);
