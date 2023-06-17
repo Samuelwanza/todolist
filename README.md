@@ -96,7 +96,7 @@ By following these steps, you can effectively run and validate the tests for the
 ### Deployment:
 
 Deployment date: 10th June, 2023.
-[Deployed Link]()
+[Deployed Link](https://samuelwanza.github.io/todolist/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
